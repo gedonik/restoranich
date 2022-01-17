@@ -1,42 +1,46 @@
 $(function () {
+	$(
+		'.header-nav__list a, .menu__btn, .user-nav__btn, .reserve__link, .header__logo'
+	).on('click', function (event) {
+		event.preventDefault();
+		const headerHeight = 80;
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate(
+			{
+				scrollTop: top - headerHeight,
+			},
+			1500
+		);
+	});
 
-  $(".header-nav__list a, .menu__btn, .user-nav__btn, .reserve__link, .header__logo").on("click", function (event) {
-    event.preventDefault();
-    var id = $(this).attr('href'),
-      top = $(id).offset().top;
-    $('body,html').animate({
-      scrollTop: top
-    }, 1500);
-  });
+	$('.slider__list').slick({
+		dots: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+	});
 
-  $('.slider__list').slick({
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
+	$('.header-nav__btn, .header-nav a').on('click', function () {
+		$('.header__inner').toggleClass('header__inner--active');
+	});
 
-  $('.header-nav__btn, .header-nav a').on('click', function () {
-    $('.header__inner').toggleClass('header__inner--active');
-  });
-
-  $('.contacts__date').flatpickr({
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-    disableMobile: true
-  });
-
+	$('.contacts__date').flatpickr({
+		enableTime: true,
+		dateFormat: 'Y-m-d H:i',
+		disableMobile: true,
+	});
 });
 
 var mixer = mixitup('.menu__content', {
-  load: {
-    filter: '.category-a'
-  }
+	load: {
+		filter: '.category-a',
+	},
 });
 
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll(".lock-padding");
+const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
 
@@ -45,7 +49,7 @@ const timeout = 800;
 if (popupLinks.length > 0) {
 	for (let index = 0; index < popupLinks.length; index++) {
 		const popupLink = popupLinks[index];
-		popupLink.addEventListener("click", function (e) {
+		popupLink.addEventListener('click', function (e) {
 			const popupName = popupLink.getAttribute('href').replace('#', '');
 			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
@@ -73,7 +77,7 @@ function popupOpen(curentPopup) {
 			bodyLock();
 		}
 		curentPopup.classList.add('open');
-		curentPopup.addEventListener("click", function (e) {
+		curentPopup.addEventListener('click', function (e) {
 			if (!e.target.closest('.popup__content')) {
 				popupClose(e.target.closest('.popup'));
 			}
@@ -91,7 +95,8 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue =
+		window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let index = 0; index < lockPadding.length; index++) {

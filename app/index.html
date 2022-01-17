@@ -1,1779 +1,2106 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Рестораныч</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header__inner">
-        <nav class="header-nav">
-
-          <button class="header-nav__btn">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
-              <path d="M0 0H30V2H0V0Z" fill="white"></path>
-              <path d="M0 8H30V10H0V8Z" fill="white"></path>
-              <rect y="16" width="30" height="2" fill="white"></rect>
-            </svg>
-          </button>
-
-          <ul class="header-nav__list">
-            <li class="header-nav__item header-nav__item--active">
-              <a class="header-nav__link" href="#body">Ресторан</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#menu">Меню</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#history">История</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-
-        </nav>
-
-        <a class="logo header__logo" href="#body">
-          <img src="images/logo.png" alt="logo" width="240" height="34">
-        </a>
-
-        <div class="reserve">
-          <address class="header__address">
-            <a class="header__address--phone" href="tel:+79639440335">
-              +7(963)944-03-35
-            </a>
-            <span class="header__address--desc">
-              ул. Бориса Богаткова, д.163/6 Новосибирск, Россия
-            </span>
-          </address>
-          <a class="btn reserve__link" href="#contacts">
-            Бронь
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-  </header>
-
-  <main class="main">
-
-    <h1 class="visually-hidden">Интерьер ресторана</h1>
-
-    <section class="slider">
-      <div class="wrapper">
-        <ul class="slider__list">
-
-          <li class="slider__item" style="background-image: url('images/slider/1.jpg')"></li>
-
-          <li class="slider__item" style="background-image: url('images/slider/2.jpg')"></li>
-
-          <li class="slider__item" style="background-image: url('images/slider/3.jpg')"></li>
-
-          <li class="slider__item" style="background-image: url('images/slider/4.jpg')"></li>
-
-          <li class="slider__item" style="background-image: url('images/slider/5.jpg')"></li>
-
-        </ul>
-
-        <div class="user-nav">
-          <div class="container">
-
-            <div class="user-nav__inner">
-
-              <div class="social">
-                <a class="social__item" target="_blank" href="https://www.facebook.com/">
-                  <span class="visually-hidden">Facebook link</span>
-                  <svg width="30" height="30">
-                    <use xlink:href="images/sprite.svg#fb"></use>
-                  </svg>
-                </a>
-                <a class="social__item" target="_blank" href="https://www.instagram.com/?hl=ru">
-                  <span class="visually-hidden">Instagram link</span>
-                  <svg width="30" height="30">
-                    <use xlink:href="images/sprite.svg#insta"></use>
-                  </svg>
-                </a>
-              </div>
-
-              <a class="btn user-nav__btn" href="#menu">
-                Меню ресторана
-              </a>
-
-              <a class="popup-link btn user-nav__btn" href="#popup">
-                Банкеты
-              </a>
-              <div id="popup" class="popup">
-                <div class="popup__body">
-                  <div class="popup__content">
-
-                    <a href="#header" class="popup__close close-popup">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15">
-                        <path
-                          d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0" />
-                      </svg>
-                    </a>
-                    <h2 class="title party__title">Заявка на банкет</h2>
-
-                    <ul class="party">
-                      <li class="party__item">
-                        <img class="party__img" src="images/party/birthday.jpg" filter: alt="birthday">
-                        <p class="party__text">Дни рождения и юбилеи</p>
-                      </li>
-                      <li class="party__item">
-                        <img class="party__img" src="images/party/wedding.jpg" alt="wedding">
-                        <p class="party__text">Свадебные торжества</p>
-                      </li>
-                      <li class="party__item">
-                        <img class="party__img" src="images/party/corporate.jpg" alt="corporate">
-                        <p class="party__text">Корпоративные праздники</p>
-                      </li>
-                      <li class="party__item">
-                        <img class="party__img" src="images/party/kids.jpg" alt="kids">
-                        <p class="party__text">Выпускные и детские</p>
-                      </li>
-                    </ul>
-
-                    <div class="party-form">
-                      <p class="party__form-text">Оставьте заявку, и мы свяжемся с Вами в ближайшее время!</p>
-
-                      <form class="party__form" action="#">
-
-                        <label class="visually-hidden" for="username">username</label>
-                        <input class="contacts__item party__name" type="text" placeholder="Введите Ваше имя" required
-                          name="username">
-
-                        <label class="visually-hidden" for="tel">tel</label>
-                        <input class="contacts__item party__tel" type="tel" placeholder="Введите Ваш телефон" required
-                          name="phone">
-
-                        <div class="form">
-                          <div class="form__radio">
-                            <input id="radio-1" type="radio" name="radio" value="1" checked>
-                            <label for="radio-1">Свадьба</label>
-                          </div>
-
-                          <div class="form__radio">
-                            <input id="radio-2" type="radio" name="radio" value="2">
-                            <label for="radio-2">День рождения</label>
-                          </div>
-
-                          <div class="form__radio">
-                            <input id="radio-3" type="radio" name="radio" value="3">
-                            <label for="radio-3">Корпоратив</label>
-                          </div>
-
-                          <div class="form__radio">
-                            <input id="radio-4" type="radio" name="radio" value="4">
-                            <label for="radio-4">Выпускной или детский праздник</label>
-                          </div>
-
-                          <div class="form__radio">
-                            <input id="radio-5" type="radio" name="radio" value="5">
-                            <label for="radio-5">Другое</label>
-                          </div>
-
-                        </div>
-
-                        <button class="btn more__link" type="submit">
-                          Отправить
-                        </button>
-
-                      </form>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="menu" id="menu">
-      <div class="container">
-        <h2 class="title menu__title">Меню ресторана</h2>
-
-        <ul class="menu__filter-btn">
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-a">Холодные закуски</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-b">Закуски в стол</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-c">Горячие закуски</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-d">Супы</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-e">Горячие блюда из птицы и
-              дичи</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-f">Горячие блюда из рыбы и
-              морепродуктов</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-g">Горячие блюда из
-              мяса</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-h">Гарниры</button>
-          </li>
-          <li class="menu__element">
-            <button class="btn menu__btn" href="#" type="button" data-filter=".category-i">Десерты</button>
-          </li>
-        </ul>
-
-        <ul class="menu__content">
-
-          <li class="menu__item mix category-a">
-            <h2 class="menu__item-title">Холодные закуски</h2>
-
-            <h3 class="menu__item-name">Карпаччо из брянской говядины с кинзой</h3>
-            <div class="menu__item-desc">
-              <p>Карпаччо — холодная закуска из тонких слайсов сырой говядины, заправленных оливковым маслом, лимонным
-                соком и специями.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1140</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Тельное из кефали под сливочным кулисом</h3>
-            <div class="menu__item-desc">
-              <p>Тельное из кефали с мясом краба под сливочным кулисом. Подаётся с кремом из зелёного горошка,
-                посыпается сушёной домашней икрой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1200</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">"Мильфей" из дальневосточных морских гребешков
-            </h3>
-            <div class="menu__item-desc">
-              <p>Морской гребешок прослаивается домашним сливочным сыром, подаётся со спелым
-                авокадо и золем из лесных ягод.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1650</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Строганина из ленского осетра
-            </h3>
-            <div class="menu__item-desc">
-              <p>Строганина из ленского осетра подается с раковыми шейками и капперсами.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1370</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Икра Белуги (30 гр)
-            </h3>
-            <div class="menu__item-desc">
-              <p>"Белуга гибрид" - это сорт икры, полученный от бестера, гибрида двух видов
-                осетровых рыб, сочетающий в себе скорое созревание стерляди и быстрый рост белуги. Вкус этой икры
-                нежный, деликатный, маслянистый, ближе ко вкусу икры белуги.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">2720</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Средиземноморские молодые устрицы (6 штук)
-            </h3>
-            <div class="menu__item-desc">
-              <p>Средиземноморские устрицы имеют необычный, нежный вкус, благодаря которому они
-                считаются изысканным деликатесом. Секрет кроется в природных условиях в местах обитания устриц. Растут
-                они
-                у берегов Туниса, на мелководье в чистой морской воде. Особое значение имеют водоросли, которыми и
-                питаются моллюски. Именно они дают мясу тот самый вкус. Лучшими приправами к мясу устриц являются
-                лимонный
-                сок, оливковое масло и соевый соус.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1500</span> <span>руб.</span>-
-            </div>
-            <h3 class="menu__item-name">Тар-тар из говядины Ангус
-            </h3>
-            <div class="menu__item-desc">
-              <p>Тартар - одна из самых популярных холодных закусок. В первую очередь важно
-                качество мяса, ведь блюдо не подвергается термической обработке и подается сырым. Не стоит этого
-                бояться
-                - стандарты качества и пищевой безопасности в нашем ресторане гарантируют идеальный результат.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">700</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-b">
-            <h2 class="menu__item-title">Закуски в стол</h2>
-
-            <h3 class="menu__item-name">Рыбное ассорти</h3>
-            <div class="menu__item-desc">
-              <p>Лосось, скумбрия, сельдь слабого посола с эклерами с красной икрой, сыром и
-                сайрой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">880</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Ассорти из сыров</h2>
-            <div class="menu__item-desc">
-              <p>Адыгейский сыр, гауда, пармезан, копченый сыр, дор блю, фета, эклеры с
-                творожным сыром и клюквой, мед, виноград, груша.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">830</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Мясная тарелка
-            </h3>
-            <div class="menu__item-desc">
-              <p>Гастрономия собственного производства: буженина, ростбиф, пряная говядина, краинская колбаска с
-                сыром;
-                салями чорризо с маринованными огурчиками, чесночным багетом и соусом хрен.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1070</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Ассорти из брускет
-            </h3>
-            <div class="menu__item-desc">
-              <p>С черри и фетой; с тар-таром из лосося; с запеченным перцем; с пряной говядиной
-                и вялеными томатами.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">690</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Пряная говядина
-            </h3>
-            <div class="menu__item-desc">
-              <p>С каперсами, свежим салатом, сыром пармезан и бальзамической заправкой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">480</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-c">
-            <h2 class="menu__item-title">Горячие закуски</h2>
-
-            <h3 class="menu__item-name">Закуска из запеченых овощей</h3>
-            <div class="menu__item-desc">
-              <p>Томаты, цукини, баклажаны с чесноком и зеленью.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">865</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Закуска из перепелов</h2>
-            <div class="menu__item-desc">
-              <p>Перепела в соусе.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">595</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Креветки жареные
-            </h3>
-            <div class="menu__item-desc">
-              <p>Креветки жареные с ароматными специями и чесноком.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">895</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Кесадилья с курицей
-            </h3>
-            <div class="menu__item-desc">
-              <p>Пшеничная лепешка с курицей с овощами и сыром.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">430</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Мидии в белом вине
-            </h3>
-            <div class="menu__item-desc">
-              <p>Мидии в соусе из беого вина, тимьяна и соевой заправки.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">720</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Тигровые креветки жареные
-            </h3>
-            <div class="menu__item-desc">
-              <p>Тигровые креветки обжаренные в остром соусе с добавлением чеснока, томатов черри, зелени и лимона.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">865</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-d">
-            <h2 class="menu__item-title">Супы</h2>
-
-            <h3 class="menu__item-name">Борщ мясной</h3>
-            <div class="menu__item-desc">
-              <p>Говяжий бульон, говядина, капуста, свёкла, картофель, морковь, лук, томатная паста, чеснок.
-                Украшается
-                зеленью. Подается со сметаной.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">430</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Солянка мясная</h3>
-            <div class="menu__item-desc">
-              <p>Говяжий бульон, говядина, лук, соленые огурцы, томатная паста, оливки, маслины,
-                каперсы, лимон, Подается со сметаной.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">475</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Удон с курицей и креветками
-            </h3>
-            <div class="menu__item-desc">
-              <p>Куриный бульон, паста карри, курица, креветки, лапша удон, шампиньоны,
-                болгарский перец, морковь, лук порей, устричный соус, соевый соус.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">550</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Крем-суп из брокколи с лососем
-            </h3>
-            <div class="menu__item-desc">
-              <p>Лосось, брокколи, картофель, лук, мускатный орех, петрушка.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">620</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Крем-суп из раковых шеек
-            </h3>
-            <div class="menu__item-desc">
-              <p>Сливки, лук, морковь сельдерей, томатная паста, креветки, гвоздика, сухарики.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">650</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-e">
-            <h2 class="menu__item-title">Горячие блюда из птицы и дичи</h2>
-
-            <h3 class="menu__item-name">Перепёлка фаршированная яблоками в клюквенном соусе</h3>
-            <div class="menu__item-desc">
-              <p>Перепёлка с кисло сладким соусом.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">710</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Филе фермерского цыплёнка на гриле с кускусом</h3>
-            <div class="menu__item-desc">
-              <p>Филе,сладкий соус чили, кускус, изюм, руккола.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">680</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Лявенги из перепелки
-            </h3>
-            <div class="menu__item-desc">
-              <p>Алыча, Орехи грецкие, Перепелка
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">790</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">"Лесное застолье"
-            </h3>
-            <div class="menu__item-desc">
-              <p>По Вашему выбору филе изюбря, оленя, косули или кабана, которое маринуется в специях, а затем
-                обжирвается с папоротником, овощами и кедровыми орешками.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">820</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">"Лакомство шамана"
-            </h3>
-            <div class="menu__item-desc">
-              <p>Обжаренное филе дичи (олень, изюбрь, косуля или кабан, по Вашему выбору), начиненное куриной печенью.
-                Подается с ароматной поджаркой из приморского папоротника с овощами, чесноком, зеленью и специями.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">895</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Оленина с грушей
-            </h3>
-            <div class="menu__item-desc">
-              <p>Филе оленя, маринованное в красном вине. Подается под соусом "Мицукан".
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">850</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Дичь в сметане на сковороде
-            </h3>
-            <div class="menu__item-desc">
-              <p>По Вашему выбору: филе изюбря, оленя, косули, кабана или медведя, запеченные с шампиньонами в
-                сметанном
-                соусе с сыром и зеленью.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">845</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Оленина на гриле
-            </h3>
-            <div class="menu__item-desc">
-              <p>Нежное, сочное мясо оленя, маринованное в красном вине, гарнируется обжаренными кусочками кабачков,
-                зеленью и специями.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">795</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-f">
-            <h2 class="menu__item-title">Горячие блюда из рыбы и морепродуктов</h2>
-
-            <h3 class="menu__item-name">Рыбный сет-гриль на 2 персоны</h3>
-            <div class="menu__item-desc">
-              <p>Обжаренное филе судака, скумбрии, лосося, кальмара, лангустин гриль, мидии с соусом провансаль.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">1190</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Командорский кальмар-гриль</h2>
-            <div class="menu__item-desc">
-              <p>С овощами и соусом «сливочный хрен».
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">590</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Рис с морепродуктами в соусе том ям
-            </h3>
-            <div class="menu__item-desc">
-              <p>Креветки, мидии, кальмар, овощи.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">690</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Филе лосося
-            </h3>
-            <div class="menu__item-desc">
-              <p>С кабачками гриль и сливочно-цитрусовым соусом
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">920</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Гребешки Сенжаки с жюльеном
-              </h2>
-              <div class="menu__item-desc">
-                <p>Гребешки, микс салат, цукини, соус биск.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">795</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Кальмары Пино Гриджо Венето
-              </h3>
-              <div class="menu__item-desc">
-                <p>Кальмары, горчица дижонская, перец болгарский, томаты, микс салат.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">600</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Палтус с томатом гриль
-              </h3>
-              <div class="menu__item-desc">
-                <p>Филе палтуса, томаты свежие, моцарелла.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">750</span> <span>руб.</span>-
-              </div>
-          </li>
-
-          <li class="menu__item mix category-g">
-            <h2 class="menu__item-title">Горячие блюда из мяса</h2>
-
-            <h3 class="menu__item-name">Вырезка говядины на гриле</h3>
-            <div class="menu__item-desc">
-              <p>С соусом порто на блинчике с булгуром и грибами.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">950</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Фланк-стейк</h2>
-              <div class="menu__item-desc">
-                <p>С овощами гриль и соусом из черного перца.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">1240</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Филе-миньон с кукурузой гриль
-              </h3>
-              <div class="menu__item-desc">
-                <p>С жареными грибами и перечным соусом.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">1175</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Рубленый бифштекс
-              </h3>
-              <div class="menu__item-desc">
-                <p>С сыром, яйцом пашот, малосольными огурчиками и картофелем с чесночком.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">875</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Медальоны из свинины
-              </h3>
-              <div class="menu__item-desc">
-                <p>В перечном соусе с вялеными томатами и кус кусом.
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">650</span> <span>руб.</span>-
-              </div>
-
-              <h3 class="menu__item-name">Баранина на кости в панировке из свеклы и грецких орехов
-              </h3>
-              <div class="menu__item-desc">
-                <p>Баранья корейка, обжаренная на гриле, в панировке из свеклы и грецких орехов, с гарниров из
-                  обжаренных
-                  долек батата. Подается с соусом "Демиглас".
-                </p>
-              </div>
-              <div class="menu__price">
-                -<span class="menu__item-price">990</span> <span>руб.</span>-
-              </div>
-          </li>
-
-          <li class="menu__item mix category-h">
-            <h2 class="menu__item-title">Гарниры</h2>
-
-            <h3 class="menu__item-name">Картофель с розмарином кинзой</h3>
-            <div class="menu__price">
-              -<span class="menu__item-price">150</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Овощной гарнир с грибами</h2>
-            <div class="menu__item-desc">
-              <p>Жареные кабачки, болгарский перец, брокколи, грибы, черри.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">120</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Капуста тушеная
-            </h3>
-            <div class="menu__item-desc">
-              <p>Квашеная немецкая капуста, тушеная с белым вином, беконом и можжевеловой ягодой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">200</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Сливочный рис с песто
-            </h2>
-            <div class="menu__price">
-              -<span class="menu__item-price">150</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Кукуруза гриль
-            </h3>
-            <div class="menu__price">
-              -<span class="menu__item-price">150</span> <span>руб.</span>-
-            </div>
-            <h2 class="menu__item-name">Картофель фри
-            </h2>
-            <div class="menu__price">
-              -<span class="menu__item-price">150</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Овощи гриль
-            </h3>
-            <div class="menu__item-desc">
-              <p>Кукуруза, кабачки, баклажаны, перец болгарский, томаты черри приготовленные на гриле.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">240</span> <span>руб.</span>-
-            </div>
-          </li>
-
-          <li class="menu__item mix category-i">
-            <h2 class="menu__item-title">Десерты</h2>
-
-            <h3 class="menu__item-name">Чизкейк</h3>
-            <div class="menu__item-desc">
-              <p>Нежный сливочный десерт на основе сыра филадельфия.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">290</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Брусничный торт</h3>
-            <div class="menu__price">
-              <p>С нежным кремом из сыра.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">240</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Шоколадный фондан
-            </h3>
-            <div class="menu__item-desc">
-              <p>С пломбиром, клубникой, топингом и мятой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">290</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Наполеон
-            </h3>
-            <div class="menu__item-desc">
-              <p>С клубничным соусом.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">190</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Мороженое Семифредо с темным шоколадом
-            </h3>
-            <div class="menu__item-desc">
-              <p>Сливочно-творожный десерт с темным шоколадом и голубикой.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">190</span> <span>руб.</span>-
-            </div>
-
-            <h3 class="menu__item-name">Фруктовая ваза
-            </h3>
-            <div class="menu__item-desc">
-              <p>Груши, виноград, апельсины, яблоки, ананас, киви, ягоды.
-              </p>
-            </div>
-            <div class="menu__price">
-              -<span class="menu__item-price">890</span> <span>руб.</span>-
-            </div>
-          </li>
-
-        </ul>
-
-        <a class="popup-link btn more__link" href="#popup_2">
-          Посмотреть все
-        </a>
-
-        <div id="popup_2" class="popup">
-          <div class="popup__body">
-            <div class="popup__content">
-
-              <a href="#header" class="popup__close close-popup">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15">
-                  <path
-                    d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0" />
-                </svg>
-              </a>
-
-              <h2 class="title menu__title">Меню ресторана</h2>
-
-              <ul class="menu__content">
-
-                <li class="menu__item mix category-a">
-                  <h2 class="menu__item-title">Холодные закуски</h2>
-
-                  <h3 class="menu__item-name">Карпаччо из брянской говядины с кинзой</h3>
-                  <div class="menu__item-desc">
-                    <p>Карпаччо — холодная закуска из тонких слайсов сырой говядины, заправленных оливковым маслом,
-                      лимонным
-                      соком и специями.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1140</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Тельное из кефали под сливочным кулисом</h3>
-                  <div class="menu__item-desc">
-                    <p>Тельное из кефали с мясом краба под сливочным кулисом. Подаётся с кремом из зелёного горошка,
-                      посыпается сушёной домашней икрой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1200</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">"Мильфей" из дальневосточных морских гребешков
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Морской гребешок прослаивается домашним сливочным сыром, подаётся со спелым
-                      авокадо и золем из лесных ягод.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1650</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Строганина из ленского осетра
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Строганина из ленского осетра подается с раковыми шейками и капперсами.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1370</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Икра Белуги (30 гр)
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>"Белуга гибрид" - это сорт икры, полученный от бестера, гибрида двух видов
-                      осетровых рыб, сочетающий в себе скорое созревание стерляди и быстрый рост белуги. Вкус этой икры
-                      нежный, деликатный, маслянистый, ближе ко вкусу икры белуги.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">2720</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Средиземноморские молодые устрицы (6 штук)
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Средиземноморские устрицы имеют необычный, нежный вкус, благодаря которому они
-                      считаются изысканным деликатесом. Секрет кроется в природных условиях в местах обитания устриц.
-                      Растут
-                      они
-                      у берегов Туниса, на мелководье в чистой морской воде. Особое значение имеют водоросли, которыми и
-                      питаются моллюски. Именно они дают мясу тот самый вкус. Лучшими приправами к мясу устриц являются
-                      лимонный
-                      сок, оливковое масло и соевый соус.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1500</span> <span>руб.</span>-
-                  </div>
-                  <h3 class="menu__item-name">Тар-тар из говядины Ангус
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Тартар - одна из самых популярных холодных закусок. В первую очередь важно
-                      качество мяса, ведь блюдо не подвергается термической обработке и подается сырым. Не стоит этого
-                      бояться
-                      - стандарты качества и пищевой безопасности в нашем ресторане гарантируют идеальный результат.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">700</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-b">
-                  <h2 class="menu__item-title">Закуски в стол</h2>
-
-                  <h3 class="menu__item-name">Рыбное ассорти</h3>
-                  <div class="menu__item-desc">
-                    <p>Лосось, скумбрия, сельдь слабого посола с эклерами с красной икрой, сыром и
-                      сайрой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">880</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Ассорти из сыров</h2>
-                  <div class="menu__item-desc">
-                    <p>Адыгейский сыр, гауда, пармезан, копченый сыр, дор блю, фета, эклеры с
-                      творожным сыром и клюквой, мед, виноград, груша.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">830</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Мясная тарелка
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Гастрономия собственного производства: буженина, ростбиф, пряная говядина, краинская колбаска с
-                      сыром;
-                      салями чорризо с маринованными огурчиками, чесночным багетом и соусом хрен.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1070</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Ассорти из брускет
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>С черри и фетой; с тар-таром из лосося; с запеченным перцем; с пряной говядиной
-                      и вялеными томатами.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">690</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Пряная говядина
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>С каперсами, свежим салатом, сыром пармезан и бальзамической заправкой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">480</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-c">
-                  <h2 class="menu__item-title">Горячие закуски</h2>
-
-                  <h3 class="menu__item-name">Закуска из запеченых овощей</h3>
-                  <div class="menu__item-desc">
-                    <p>Томаты, цукини, баклажаны с чесноком и зеленью.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">865</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Закуска из перепелов</h2>
-                  <div class="menu__item-desc">
-                    <p>Перепела в соусе.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">595</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Креветки жареные
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Креветки жареные с ароматными специями и чесноком.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">895</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Кесадилья с курицей
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Пшеничная лепешка с курицей с овощами и сыром.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">430</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Мидии в белом вине
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Мидии в соусе из беого вина, тимьяна и соевой заправки.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">720</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Тигровые креветки жареные
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Тигровые креветки обжаренные в остром соусе с добавлением чеснока, томатов черри, зелени и
-                      лимона.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">865</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-d">
-                  <h2 class="menu__item-title">Супы</h2>
-
-                  <h3 class="menu__item-name">Борщ мясной</h3>
-                  <div class="menu__item-desc">
-                    <p>Говяжий бульон, говядина, капуста, свёкла, картофель, морковь, лук, томатная паста, чеснок.
-                      Украшается
-                      зеленью. Подается со сметаной.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">430</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Солянка мясная</h3>
-                  <div class="menu__item-desc">
-                    <p>Говяжий бульон, говядина, лук, соленые огурцы, томатная паста, оливки, маслины,
-                      каперсы, лимон, Подается со сметаной.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">475</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Удон с курицей и креветками
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Куриный бульон, паста карри, курица, креветки, лапша удон, шампиньоны,
-                      болгарский перец, морковь, лук порей, устричный соус, соевый соус.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">550</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Крем-суп из брокколи с лососем
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Лосось, брокколи, картофель, лук, мускатный орех, петрушка.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">620</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Крем-суп из раковых шеек
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Сливки, лук, морковь сельдерей, томатная паста, креветки, гвоздика, сухарики.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">650</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-e">
-                  <h2 class="menu__item-title">Горячие блюда из птицы и дичи</h2>
-
-                  <h3 class="menu__item-name">Перепёлка фаршированная яблоками в клюквенном соусе</h3>
-                  <div class="menu__item-desc">
-                    <p>Перепёлка с кисло сладким соусом.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">710</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Филе фермерского цыплёнка на гриле с кускусом</h3>
-                  <div class="menu__item-desc">
-                    <p>Филе,сладкий соус чили, кускус, изюм, руккола.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">680</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Лявенги из перепелки
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Алыча, Орехи грецкие, Перепелка
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">790</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">"Лесное застолье"
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>По Вашему выбору филе изюбря, оленя, косули или кабана, которое маринуется в специях, а затем
-                      обжирвается с папоротником, овощами и кедровыми орешками.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">820</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">"Лакомство шамана"
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Обжаренное филе дичи (олень, изюбрь, косуля или кабан, по Вашему выбору), начиненное куриной
-                      печенью.
-                      Подается с ароматной поджаркой из приморского папоротника с овощами, чесноком, зеленью и специями.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">895</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Оленина с грушей
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Филе оленя, маринованное в красном вине. Подается под соусом "Мицукан".
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">850</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Дичь в сметане на сковороде
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>По Вашему выбору: филе изюбря, оленя, косули, кабана или медведя, запеченные с шампиньонами в
-                      сметанном
-                      соусе с сыром и зеленью.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">845</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Оленина на гриле
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Нежное, сочное мясо оленя, маринованное в красном вине, гарнируется обжаренными кусочками
-                      кабачков,
-                      зеленью и специями.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">795</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-f">
-                  <h2 class="menu__item-title">Горячие блюда из рыбы и морепродуктов</h2>
-
-                  <h3 class="menu__item-name">Рыбный сет-гриль на 2 персоны</h3>
-                  <div class="menu__item-desc">
-                    <p>Обжаренное филе судака, скумбрии, лосося, кальмара, лангустин гриль, мидии с соусом провансаль.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">1190</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Командорский кальмар-гриль</h2>
-                  <div class="menu__item-desc">
-                    <p>С овощами и соусом «сливочный хрен».
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">590</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Рис с морепродуктами в соусе том ям
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Креветки, мидии, кальмар, овощи.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">690</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Филе лосося
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>С кабачками гриль и сливочно-цитрусовым соусом
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">920</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Гребешки Сенжаки с жюльеном
-                    </h2>
-                    <div class="menu__item-desc">
-                      <p>Гребешки, микс салат, цукини, соус биск.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">795</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Кальмары Пино Гриджо Венето
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>Кальмары, горчица дижонская, перец болгарский, томаты, микс салат.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">600</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Палтус с томатом гриль
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>Филе палтуса, томаты свежие, моцарелла.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">750</span> <span>руб.</span>-
-                    </div>
-                </li>
-
-                <li class="menu__item mix category-g">
-                  <h2 class="menu__item-title">Горячие блюда из мяса</h2>
-
-                  <h3 class="menu__item-name">Вырезка говядины на гриле</h3>
-                  <div class="menu__item-desc">
-                    <p>С соусом порто на блинчике с булгуром и грибами.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">950</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Фланк-стейк</h2>
-                    <div class="menu__item-desc">
-                      <p>С овощами гриль и соусом из черного перца.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">1240</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Филе-миньон с кукурузой гриль
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>С жареными грибами и перечным соусом.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">1175</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Рубленый бифштекс
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>С сыром, яйцом пашот, малосольными огурчиками и картофелем с чесночком.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">875</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Медальоны из свинины
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>В перечном соусе с вялеными томатами и кус кусом.
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">650</span> <span>руб.</span>-
-                    </div>
-
-                    <h3 class="menu__item-name">Баранина на кости в панировке из свеклы и грецких орехов
-                    </h3>
-                    <div class="menu__item-desc">
-                      <p>Баранья корейка, обжаренная на гриле, в панировке из свеклы и грецких орехов, с гарниров из
-                        обжаренных
-                        долек батата. Подается с соусом "Демиглас".
-                      </p>
-                    </div>
-                    <div class="menu__price">
-                      -<span class="menu__item-price">990</span> <span>руб.</span>-
-                    </div>
-                </li>
-
-                <li class="menu__item mix category-h">
-                  <h2 class="menu__item-title">Гарниры</h2>
-
-                  <h3 class="menu__item-name">Картофель с розмарином кинзой</h3>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">150</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Овощной гарнир с грибами</h2>
-                  <div class="menu__item-desc">
-                    <p>Жареные кабачки, болгарский перец, брокколи, грибы, черри.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">120</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Капуста тушеная
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Квашеная немецкая капуста, тушеная с белым вином, беконом и можжевеловой ягодой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">200</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Сливочный рис с песто
-                  </h2>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">150</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Кукуруза гриль
-                  </h3>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">150</span> <span>руб.</span>-
-                  </div>
-                  <h2 class="menu__item-name">Картофель фри
-                  </h2>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">150</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Овощи гриль
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Кукуруза, кабачки, баклажаны, перец болгарский, томаты черри приготовленные на гриле.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">240</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-                <li class="menu__item mix category-i">
-                  <h2 class="menu__item-title">Десерты</h2>
-
-                  <h3 class="menu__item-name">Чизкейк</h3>
-                  <div class="menu__item-desc">
-                    <p>Нежный сливочный десерт на основе сыра филадельфия.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">290</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Брусничный торт</h3>
-                  <div class="menu__price">
-                    <p>С нежным кремом из сыра.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">240</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Шоколадный фондан
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>С пломбиром, клубникой, топингом и мятой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">290</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Наполеон
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>С клубничным соусом.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">190</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Мороженое Семифредо с темным шоколадом
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Сливочно-творожный десерт с темным шоколадом и голубикой.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">190</span> <span>руб.</span>-
-                  </div>
-
-                  <h3 class="menu__item-name">Фруктовая ваза
-                  </h3>
-                  <div class="menu__item-desc">
-                    <p>Груши, виноград, апельсины, яблоки, ананас, киви, ягоды.
-                    </p>
-                  </div>
-                  <div class="menu__price">
-                    -<span class="menu__item-price">890</span> <span>руб.</span>-
-                  </div>
-                </li>
-
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="history" id="history">
-
-      <div class="history__desc history__desc--first">
-        <div class="history__text">
-          <h2 class="title">История 1</h2>
-          <p>В России история ресторанного (именно ресторанного) дела менее глубокая и связана фактически с
-            копированием иностранного на отечественной почве. Что же касается в целом заведений общественного
-            питания,
-            то, конечно же, это были постоялые дворы со своими трактирами, харчевнями. В XVIII веке постоялые
-            дворы в
-            Петербурге стали называть на «аглицкий манер» аустериями, но это название было быстро вытеснено
-            словом
-            «трактир». Заведения общественного питания при аустериях привлекали диковинными чаем, шоколадом и
-            кофе. В
-            Москве существовали хорошие трактиры с истинно русской кухней. Любопытный факт: в конце XIX – начале
-            XX
-            века для ресторанной культуры важным элементом являлись зеркала, благодаря которым посетитель мог
-            разглядывать людей, не глядя на них прямо.</p>
-        </div>
-      </div>
-
-      <div class="history__pic history__pic--first"></div>
-
-      <div class="history__desc history__desc--second">
-        <div class="history__text">
-          <h2 class="title">История 2</h2>
-          <p>В сфере питания в России революция свершилась быстрее, чем в самой политике. Фешенебельные
-            рестораны
-            сменились общественными столовыми, где люди могли поесть за талоны, это было особенно важно в первые
-            послереволюционные годы. В 1925 году в Иванове появилась первая фабрика-кухня в стране, она
-            обслуживала
-            восемь заводских столовых, то есть примерно четверть всего населения города. Такие фабрики-кухни
-            открывались во многих городах СССР. Там можно было поесть, купить продукты, полуфабрикаты – всё в
-            соответствии с лозунгом «Долой кухонное рабство!». Тем не менее обобществлена сфера питания так и не
-            была.
-            Поэтому в 1930-х годах городские общепиты стали объединяться в государственные тресты. Ну а со
-            временем
-            рестораны вошли в число привычных реалий советских людей…</p>
-        </div>
-      </div>
-
-      <div class="history__pic history__pic--second"></div>
-
-    </section>
-
-    <section class="contacts" id="contacts">
-
-      <div class="container">
-        <h2 class="title contacts__title">Забронировать стол</h2>
-        <div class="contacts__text">
-          <p>Укажите какая дата вас интересует и какое будет количество гостей.
-            Мы свяжемся с вами в ближайшее время и подтвердим бронирование.</p>
-        </div>
-
-
-        <div class="contacts__form-inner">
-          <form class="contacts__form" action="#">
-
-            <label class="visually-hidden" for="username">username</label>
-            <input class="contacts__item" type="text" placeholder="Введите Ваше имя" required name="username">
-
-            <label class="visually-hidden" for="tel">tel</label>
-            <input class="contacts__item" type="tel" placeholder="Введите Ваш телефон" required name="phone">
-
-            <label class="visually-hidden" for="number">number</label>
-            <input class="contacts__item contacts__item--guest" type="number" min="1" max="100"
-              placeholder="Кол-во гостей" required name="number">
-
-            <div class="contacts__item--date">
-              <label class="visually-hidden" for="date">Время</label>
-              <input class="contacts__item contacts__date" name="date" placeholder="Выберите время" required>
-            </div>
-
-          </form>
-        </div>
-
-        <div class="contacts__btn-inner">
-          <button class="btn contacts__btn" type="submit">
-            Забронировать стол
-          </button>
-          <span class="contacts__confidential">Нажимая на кнопку «Забронировать стол», вы соглашаетесь с
-            <a class="contacts__link popup-link" href="#popup_3">политикой конфедициальности</a></span>
-        </div>
-
-        <div id="popup_3" class="popup">
-          <div class="popup__body">
-            <div class="popup__content confidential__content">
-
-              <a href="#header" class="popup__close close-popup">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15">
-                  <path
-                    d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0" />
-                </svg>
-              </a>
-
-              <h3 class="title">Политика в отношении обработки персональных данных</h3>
-
-              <ol class="confidential__text">
-
-                <li class="confidential__text-item">Общие положения<br>
-                  Настоящая политика обработки персональных данных составлена в соответствии с требованиями
-                  Федерального
-                  закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных
-                  данных
-                  и меры по обеспечению безопасности персональных данных, предпринимаемые Рестораныч (далее –
-                  Оператор).
-                  <ol>
-                    <li> Оператор ставит своей важнейшей целью и условием осуществления своей деятельности
-                      соблюдение
-                      прав и
-                      свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на
-                      неприкосновенность частной жизни, личную и семейную тайну.
-                    </li>
-                    <li> Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика)
-                      применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта
-                      http://yp.ru/
-                    </li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Основные понятия, используемые в Политике<br>
-                  <ol>
-                    <li> Автоматизированная обработка персональных данных – обработка персональных данных с помощью
-                      средств
-                      вычислительной техники;</li>
-                    <li>Блокирование персональных данных – временное прекращение обработки персональных данных (за
-                      исключением случаев, если обработка необходима для уточнения персональных данных);</li>
-                    <li>Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и
-                      баз
-                      данных, обеспечивающих их доступность в сети интернет по сетевому адресу http://yp.ru/;</li>
-                    <li>Информационная система персональных данных — совокупность содержащихся в базах данных
-                      персональных
-                      данных, и обеспечивающих их обработку информационных технологий и технических средств;</li>
-                    <li>Обезличивание персональных данных — действия, в результате которых невозможно определить без
-                      использования дополнительной информации принадлежность персональных данных конкретному
-                      Пользователю или
-                      иному субъекту персональных данных;</li>
-                    <li>Обработка персональных данных – любое действие (операция) или совокупность действий
-                      (операций),
-                      совершаемых с использованием средств автоматизации или без использования таких средств с
-                      персональными
-                      данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление,
-                      изменение),
-                      извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание,
-                      блокирование, удаление, уничтожение персональных данных;</li>
-                    <li>Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо,
-                      самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку
-                      персональных
-                      данных, а также определяющие цели обработки персональных данных, состав персональных данных,
-                      подлежащих
-                      обработке, действия (операции), совершаемые с персональными данными;</li>
-                    <li>Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или
-                      определяемому Пользователю веб-сайта http://yp.ru/;</li>
-                    <li>Пользователь – любой посетитель веб-сайта http://yp.ru/;</li>
-                    <li>Предоставление персональных данных – действия, направленные на раскрытие персональных данных
-                      определенному лицу или определенному кругу лиц;</li>
-                    <li>Распространение персональных данных – любые действия, направленные на раскрытие персональных
-                      данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с
-                      персональными
-                      данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах
-                      массовой
-                      информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к
-                      персональным данным каким-либо иным способом;</li>
-                    <li>Трансграничная передача персональных данных – передача персональных данных на территорию
-                      иностранного государства органу власти иностранного государства, иностранному физическому или
-                      иностранному юридическому лицу;</li>
-                    <li>Уничтожение персональных данных – любые действия, в результате которых персональные данные
-                      уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных
-                      данных в
-                      информационной системе персональных данных и (или) уничтожаются материальные носители
-                      персональных
-                      данных.</li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Оператор может обрабатывать следующие персональные данные
-                  Пользователя<br>
-                  <ol>
-                    <li>Фамилия, имя, отчество;</li>
-                    <li>Электронный адрес;</li>
-                    <li>Номера телефонов;</li>
-                    <li>Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов
-                      «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
-                    </li>
-                    <li>Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные
-                      данные.</li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Цели обработки персональных данных<br>
-                  <ol>
-                    <li>Цель обработки персональных данных Пользователя — предоставление доступа Пользователю к
-                      сервисам,
-                      информации и/или материалам, содержащимся на веб-сайте.</li>
-                    <li>Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах,
-                      специальных предложениях и различных событиях. Пользователь всегда может отказаться от
-                      получения
-                      информационных сообщений, направив Оператору письмо на адрес электронной почты info@yp.ru с
-                      пометкой
-                      «Отказ от уведомлений о новых продуктах и услугах и специальных предложениях».</li>
-                    <li>Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат
-                      для
-                      сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его
-                      содержания.
-                    </li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Правовые основания обработки персональных данных<br>
-                  <ol>
-                    <li>Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или
-                      отправки
-                      Пользователем самостоятельно через специальные формы, расположенные на сайте http://yp.ru/.
-                      Заполняя
-                      соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь
-                      выражает
-                      свое
-                      согласие с данной Политикой.</li>
-                    <li>Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в
-                      настройках
-                      браузера Пользователя (включено сохранение файлов «cookie» и использование технологии
-                      JavaScript).
-                    </li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Порядок сбора, хранения, передачи и других видов обработки
-                  персональных
-                  данных<br>
-                  Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем
-                  реализации
-                  правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований
-                  действующего законодательства в области защиты персональных данных.
-                  <ol>
-                    <li>Оператор обеспечивает сохранность персональных данных и принимает все возможные меры,
-                      исключающие
-                      доступ к персональным данным неуполномоченных лиц.</li>
-                    <li>Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим
-                      лицам, за
-                      исключением случаев, связанных с исполнением действующего законодательства.</li>
-                    <li>В случае выявления неточностей в персональных данных, Пользователь может актуализировать их
-                      самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора
-                      info@yp.ru с пометкой «Актуализация персональных данных».</li>
-                    <li>Срок обработки персональных данных является неограниченным. Пользователь может в любой
-                      момент
-                      отозвать свое согласие на обработку персональных данных, направив Оператору уведомление
-                      посредством
-                      электронной почты на электронный адрес Оператора info@yp.ru с пометкой «Отзыв согласия на
-                      обработку
-                      персональных данных».</li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Трансграничная передача персональных данных<br>
-                  <ol>
-                    <li>Оператор до начала осуществления трансграничной передачи персональных данных обязан
-                      убедиться
-                      в
-                      том, что иностранным государством, на территорию которого предполагается осуществлять передачу
-                      персональных данных, обеспечивается надежная защита прав субъектов персональных данных.</li>
-                    <li>Трансграничная передача персональных данных на территории иностранных государств, не
-                      отвечающих
-                      вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной
-                      форме
-                      субъекта персональных данных на трансграничную передачу его персональных данных и/или
-                      исполнения
-                      договора, стороной которого является субъект персональных данных.</li>
-                  </ol>
-                </li>
-
-                <li class="confidential__text-item">Заключительные положения<br>
-                  <ol>
-                    <li>Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки
-                      его
-                      персональных данных, обратившись к Оператору с помощью электронной почты info@yp.ru.</li>
-                    <li>В данном документе будут отражены любые изменения политики обработки персональных данных
-                      Оператором. Политика действует бессрочно до замены ее новой версией.</li>
-                    <li>Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу
-                      http://yp.ru/yp.ru/privacy</li>
-                  </ol>
-                </li>
-              </ol>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-
-    <section class="map">
-
-      <div class="container">
-        <script class="map-ya" type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A47ba35575543f05f65c12238d2f2655fa092795b124b1abf4815d6d8e53263bc&amp;max-width=1500&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
-        </script>
-      </div>
-
-    </section>
-
-  </footer>
-
-  <script src="js/main.min.js"></script>
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Рестораныч</title>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+
+	<body>
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="header-nav">
+						<button class="header-nav__btn">
+							<span class="visually-hidden">Открыть меню</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="30"
+								height="18"
+								viewbox="0 0 30 18"
+								fill="none"
+							>
+								<path d="M0 0H30V2H0V0Z" fill="white"></path>
+								<path d="M0 8H30V10H0V8Z" fill="white"></path>
+								<rect y="16" width="30" height="2" fill="white"></rect>
+							</svg>
+						</button>
+
+						<ul class="header-nav__list">
+							<li class="header-nav__item">
+								<a
+									class="header-nav__link header-nav__link--active"
+									href="#body"
+									>Ресторан</a
+								>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__link" href="#menu">Меню</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__link" href="#history">История</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__link" href="#contacts">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a class="logo header__logo" href="#body">
+						<img
+							src="images/logo.svg"
+							alt="Логотип сайта Рестораныч"
+							width="240"
+							height="34"
+						/>
+					</a>
+
+					<div class="reserve">
+						<address class="header-address">
+							<a class="header-address__phone" href="tel:+79639440335">
+								+7(963)944-03-35
+							</a>
+							<span class="header-address__desc">
+								ул. Бориса Богаткова, д.163/6 Новосибирск, Россия
+							</span>
+						</address>
+						<a class="btn reserve__link" href="#contacts"> Бронь </a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<h1 class="visually-hidden">Сайт ресторана Рестораныч</h1>
+
+			<section class="slider">
+				<h2 class="visually-hidden">Фото интерьеров ресторана Рестораныч</h2>
+				<div class="wrapper">
+					<ul class="slider__list">
+						<li
+							class="slider__item"
+							style="background-image: url('images/slider/1.jpg')"
+						></li>
+
+						<li
+							class="slider__item"
+							style="background-image: url('images/slider/2.jpg')"
+						></li>
+
+						<li
+							class="slider__item"
+							style="background-image: url('images/slider/3.jpg')"
+						></li>
+
+						<li
+							class="slider__item"
+							style="background-image: url('images/slider/4.jpg')"
+						></li>
+
+						<li
+							class="slider__item"
+							style="background-image: url('images/slider/5.jpg')"
+						></li>
+					</ul>
+
+					<div class="user-nav">
+						<div class="container">
+							<div class="user-nav__inner">
+								<div class="social">
+									<a
+										class="social__item"
+										target="_blank"
+										aria-label="Facebook"
+										href="https://www.facebook.com/"
+									>
+										<svg width="30" height="30">
+											<use xlink:href="images/sprite.svg#fb"></use>
+										</svg>
+									</a>
+									<a
+										class="social__item"
+										target="_blank"
+										aria-label="Instagram"
+										href="https://www.instagram.com/?hl=ru"
+									>
+										<svg width="30" height="30">
+											<use xlink:href="images/sprite.svg#insta"></use>
+										</svg>
+									</a>
+								</div>
+
+								<a class="btn user-nav__btn" href="#menu"> Меню ресторана </a>
+
+								<a class="popup-link btn user-nav__btn" href="#popup">
+									Банкеты
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="menu" id="menu">
+				<h2 class="visually-hidden">Меню ресторана Рестораныч</h2>
+				<div class="container">
+					<h2 class="title menu__title">Меню ресторана</h2>
+
+					<ul class="menu__filter-btn">
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-a"
+							>
+								Холодные закуски
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-b"
+							>
+								Закуски в стол
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-c"
+							>
+								Горячие закуски
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-d"
+							>
+								Супы
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-e"
+							>
+								Горячие блюда из птицы и дичи
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-f"
+							>
+								Горячие блюда из рыбы и морепродуктов
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-g"
+							>
+								Горячие блюда из мяса
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-h"
+							>
+								Гарниры
+							</button>
+						</li>
+						<li class="menu__element">
+							<button
+								class="btn menu__btn"
+								type="button"
+								data-filter=".category-i"
+							>
+								Десерты
+							</button>
+						</li>
+					</ul>
+
+					<ul class="menu__content">
+						<li class="menu__item mix category-a">
+							<h3 class="menu__item-title">Холодные закуски</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Карпаччо из брянской говядины с кинзой
+								</h4>
+								<p class="menu__item-desc">
+									Карпаччо — холодная закуска из тонких слайсов сырой говядины,
+									заправленных оливковым маслом, лимонным соком и специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1140</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Тельное из кефали под сливочным кулисом
+								</h4>
+								<p class="menu__item-desc">
+									Тельное из кефали с мясом краба под сливочным кулисом.
+									Подаётся с кремом из зелёного горошка, посыпается сушёной
+									домашней икрой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1200</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									"Мильфей" из дальневосточных морских гребешков
+								</h4>
+								<p class="menu__item-desc">
+									Морской гребешок прослаивается домашним сливочным сыром,
+									подаётся со спелым авокадо и золем из лесных ягод.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1650</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Строганина из ленского осетра</h4>
+								<p class="menu__item-desc">
+									Строганина из ленского осетра подается с раковыми шейками и
+									капперсами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1370</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Икра Белуги (30 гр)</h4>
+								<p class="menu__item-desc">
+									"Белуга гибрид" - это сорт икры, полученный от бестера,
+									гибрида двух видов осетровых рыб, сочетающий в себе скорое
+									созревание стерляди и быстрый рост белуги. Вкус этой икры
+									нежный, деликатный, маслянистый, ближе ко вкусу икры белуги.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">2720</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Средиземноморские молодые устрицы (6 штук)
+								</h4>
+								<p class="menu__item-desc">
+									Средиземноморские устрицы имеют необычный, нежный вкус,
+									благодаря которому они считаются изысканным деликатесом.
+									Секрет кроется в природных условиях в местах обитания устриц.
+									Растут они у берегов Туниса, на мелководье в чистой морской
+									воде. Особое значение имеют водоросли, которыми и питаются
+									моллюски. Именно они дают мясу тот самый вкус. Лучшими
+									приправами к мясу устриц являются лимонный сок, оливковое
+									масло и соевый соус.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1500</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Тар-тар из говядины Ангус</h4>
+								<p class="menu__item-desc">
+									Тартар - одна из самых популярных холодных закусок. В первую
+									очередь важно качество мяса, ведь блюдо не подвергается
+									термической обработке и подается сырым. Не стоит этого бояться
+									- стандарты качества и пищевой безопасности в нашем ресторане
+									гарантируют идеальный результат.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">700</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-b">
+							<h3 class="menu__item-title">Закуски в стол</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рыбное ассорти</h4>
+								<p class="menu__item-desc">
+									Лосось, скумбрия, сельдь слабого посола с эклерами с красной
+									икрой, сыром и сайрой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">880</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Ассорти из сыров</h4>
+								<p class="menu__item-desc">
+									Адыгейский сыр, гауда, пармезан, копченый сыр, дор блю, фета,
+									эклеры с творожным сыром и клюквой, мед, виноград, груша.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">830</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Мясная тарелка</h4>
+								<p class="menu__item-desc">
+									Гастрономия собственного производства: буженина, ростбиф,
+									пряная говядина, краинская колбаска с сыром; салями чорризо с
+									маринованными огурчиками, чесночным багетом и соусом хрен.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1070</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Ассорти из брускет</h4>
+								<p class="menu__item-desc">
+									С черри и фетой; с тар-таром из лосося; с запеченным перцем; с
+									пряной говядиной и вялеными томатами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">690</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Пряная говядина</h4>
+								<p class="menu__item-desc">
+									С каперсами, свежим салатом, сыром пармезан и бальзамической
+									заправкой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">480</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-c">
+							<h3 class="menu__item-title">Горячие закуски</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Закуска из запеченых овощей</h4>
+								<p class="menu__item-desc">
+									Томаты, цукини, баклажаны с чесноком и зеленью.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">865</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Закуска из перепелов</h4>
+								<p class="menu__item-desc">Перепела в соусе.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">595</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Креветки жареные</h4>
+								<p class="menu__item-desc">
+									Креветки жареные с ароматными специями и чесноком.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">895</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кесадилья с курицей</h4>
+								<p class="menu__item-desc">
+									Пшеничная лепешка с курицей с овощами и сыром.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">430</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Мидии в белом вине</h4>
+								<p class="menu__item-desc">
+									Мидии в соусе из беого вина, тимьяна и соевой заправки.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">720</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Тигровые креветки жареные</h4>
+								<p class="menu__item-desc">
+									Тигровые креветки обжаренные в остром соусе с добавлением
+									чеснока, томатов черри, зелени и лимона.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">865</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-d">
+							<h3 class="menu__item-title">Супы</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Борщ мясной</h4>
+								<p class="menu__item-desc">
+									Говяжий бульон, говядина, капуста, свёкла, картофель, морковь,
+									лук, томатная паста, чеснок. Украшается зеленью. Подается со
+									сметаной.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">430</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Солянка мясная</h4>
+								<p class="menu__item-desc">
+									Говяжий бульон, говядина, лук, соленые огурцы, томатная паста,
+									оливки, маслины, каперсы, лимон, Подается со сметаной.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">475</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Удон с курицей и креветками</h4>
+								<p class="menu__item-desc">
+									Куриный бульон, паста карри, курица, креветки, лапша удон,
+									шампиньоны, болгарский перец, морковь, лук порей, устричный
+									соус, соевый соус.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">550</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Крем-суп из брокколи с лососем</h4>
+								<p class="menu__item-desc">
+									Лосось, брокколи, картофель, лук, мускатный орех, петрушка.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">620</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Крем-суп из раковых шеек</h4>
+								<p class="menu__item-desc">
+									Сливки, лук, морковь сельдерей, томатная паста, креветки,
+									гвоздика, сухарики.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">650</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-e">
+							<h3 class="menu__item-title">Горячие блюда из птицы и дичи</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Перепёлка фаршированная яблоками в клюквенном соусе
+								</h4>
+								<p class="menu__item-desc">Перепёлка с кисло сладким соусом.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">710</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Филе фермерского цыплёнка на гриле с кускусом
+								</h4>
+								<p class="menu__item-desc">
+									Филе,сладкий соус чили, кускус, изюм, руккола.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">680</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Лявенги из перепелки</h4>
+								<p class="menu__item-desc">Алыча, Орехи грецкие, Перепелка</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">790</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">"Лесное застолье"</h4>
+								<p class="menu__item-desc">
+									По Вашему выбору филе изюбря, оленя, косули или кабана,
+									которое маринуется в специях, а затем обжирвается с
+									папоротником, овощами и кедровыми орешками.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">820</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">"Лакомство шамана"</h4>
+								<p class="menu__item-desc">
+									Обжаренное филе дичи (олень, изюбрь, косуля или кабан, по
+									Вашему выбору), начиненное куриной печенью. Подается с
+									ароматной поджаркой из приморского папоротника с овощами,
+									чесноком, зеленью и специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">895</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Оленина с грушей</h4>
+								<p class="menu__item-desc">
+									Филе оленя, маринованное в красном вине. Подается под соусом
+									"Мицукан".
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">850</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Дичь в сметане на сковороде</h4>
+								<p class="menu__item-desc">
+									По Вашему выбору: филе изюбря, оленя, косули, кабана или
+									медведя, запеченные с шампиньонами в сметанном соусе с сыром и
+									зеленью.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">845</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Оленина на гриле</h4>
+								<p class="menu__item-desc">
+									Нежное, сочное мясо оленя, маринованное в красном вине,
+									гарнируется обжаренными кусочками кабачков, зеленью и
+									специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">795</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-f">
+							<h3 class="menu__item-title">
+								Горячие блюда из рыбы и морепродуктов
+							</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рыбный сет-гриль на 2 персоны</h4>
+								<p class="menu__item-desc">
+									Обжаренное филе судака, скумбрии, лосося, кальмара, лангустин
+									гриль, мидии с соусом провансаль.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Командорский кальмар-гриль</h4>
+								<p class="menu__item-desc">
+									С овощами и соусом «сливочный хрен».
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">590</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Рис с морепродуктами в соусе том ям
+								</h4>
+								<p class="menu__item-desc">Креветки, мидии, кальмар, овощи.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">690</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Филе лосося</h4>
+								<p class="menu__item-desc">
+									С кабачками гриль и сливочно-цитрусовым соусом
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">920</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Гребешки Сенжаки с жюльеном</h4>
+								<p class="menu__item-desc">
+									Гребешки, микс салат, цукини, соус биск.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">795</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кальмары Пино Гриджо Венето</h4>
+								<p class="menu__item-desc">
+									Кальмары, горчица дижонская, перец болгарский, томаты, микс
+									салат.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">600</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Палтус с томатом гриль</h4>
+								<p class="menu__item-desc">
+									Филе палтуса, томаты свежие, моцарелла.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">750</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-g">
+							<h3 class="menu__item-title">Горячие блюда из мяса</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Вырезка говядины на гриле</h4>
+								<p class="menu__item-desc">
+									С соусом порто на блинчике с булгуром и грибами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">950</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Фланк-стейк</h4>
+								<p class="menu__item-desc">
+									С овощами гриль и соусом из черного перца.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1240</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Филе-миньон с кукурузой гриль</h4>
+								<p class="menu__item-desc">
+									С жареными грибами и перечным соусом.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1175</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рубленый бифштекс</h4>
+								<p class="menu__item-desc">
+									С сыром, яйцом пашот, малосольными огурчиками и картофелем с
+									чесночком.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">875</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Медальоны из свинины</h4>
+								<p class="menu__item-desc">
+									В перечном соусе с вялеными томатами и кус кусом.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">650</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Баранина на кости в панировке из свеклы и грецких орехов
+								</h4>
+								<p class="menu__item-desc">
+									Баранья корейка, обжаренная на гриле, в панировке из свеклы и
+									грецких орехов, с гарниров из обжаренных долек батата.
+									Подается с соусом "Демиглас".
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">990</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-h">
+							<h3 class="menu__item-title">Гарниры</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Картофель с розмарином кинзой</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Овощной гарнир с грибами</h4>
+								<p class="menu__item-desc">
+									Жареные кабачки, болгарский перец, брокколи, грибы, черри.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">120</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Капуста тушеная</h4>
+								<p class="menu__item-desc">
+									Квашеная немецкая капуста, тушеная с белым вином, беконом и
+									можжевеловой ягодой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">200</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Сливочный рис с песто</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кукуруза гриль</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+								<h4 class="menu__item-name">Картофель фри</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Овощи гриль</h4>
+								<p class="menu__item-desc">
+									Кукуруза, кабачки, баклажаны, перец болгарский, томаты черри
+									приготовленные на гриле.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">240</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-i">
+							<h3 class="menu__item-title">Десерты</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Чизкейк</h4>
+								<p class="menu__item-desc">
+									Нежный сливочный десерт на основе сыра филадельфия.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">290</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Брусничный торт</h4>
+								<div class="menu__price">
+									<p>С нежным кремом из сыра.</p>
+								</div>
+								<div class="menu__price">
+									-<span class="menu__item-price">240</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Шоколадный фондан</h4>
+								<p class="menu__item-desc">
+									С пломбиром, клубникой, топингом и мятой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">290</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Наполеон</h4>
+								<p class="menu__item-desc">С клубничным соусом.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Мороженое Семифредо с темным шоколадом
+								</h4>
+								<p class="menu__item-desc">
+									Сливочно-творожный десерт с темным шоколадом и голубикой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Фруктовая ваза</h4>
+								<p class="menu__item-desc">
+									Груши, виноград, апельсины, яблоки, ананас, киви, ягоды.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">890</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+					</ul>
+
+					<a class="popup-link btn btn-more" href="#popup_2">
+						Посмотреть все
+					</a>
+				</div>
+			</section>
+
+			<section class="history" id="history">
+				<h2 class="visually-hidden">История ресторанного дела</h2>
+				<div class="history__desc history__desc--first" aria-hidden="true">
+					<div class="history__text">
+						<h2 class="title">История 1</h2>
+						<p>
+							В России история ресторанного (именно ресторанного) дела менее
+							глубокая и связана фактически с копированием иностранного на
+							отечественной почве. Что же касается в целом заведений
+							общественного питания, то, конечно же, это были постоялые дворы со
+							своими трактирами, харчевнями. В XVIII веке постоялые дворы в
+							Петербурге стали называть на «аглицкий манер» аустериями, но это
+							название было быстро вытеснено словом «трактир». Заведения
+							общественного питания при аустериях привлекали диковинными чаем,
+							шоколадом и кофе. В Москве существовали хорошие трактиры с истинно
+							русской кухней. Любопытный факт: в конце XIX – начале XX века для
+							ресторанной культуры важным элементом являлись зеркала, благодаря
+							которым посетитель мог разглядывать людей, не глядя на них прямо.
+						</p>
+					</div>
+				</div>
+
+				<div class="history__pic history__pic--first"></div>
+
+				<div class="history__desc history__desc--second">
+					<div class="history__text">
+						<h2 class="title">История 2</h2>
+						<p>
+							В сфере питания в России революция свершилась быстрее, чем в самой
+							политике. Фешенебельные рестораны сменились общественными
+							столовыми, где люди могли поесть за талоны, это было особенно
+							важно в первые послереволюционные годы. В 1925 году в Иванове
+							появилась первая фабрика-кухня в стране, она обслуживала восемь
+							заводских столовых, то есть примерно четверть всего населения
+							города. Такие фабрики-кухни открывались во многих городах СССР.
+							Там можно было поесть, купить продукты, полуфабрикаты – всё в
+							соответствии с лозунгом «Долой кухонное рабство!». Тем не менее
+							обобществлена сфера питания так и не была. Поэтому в 1930-х годах
+							городские общепиты стали объединяться в государственные тресты. Ну
+							а со временем рестораны вошли в число привычных реалий советских
+							людей…
+						</p>
+					</div>
+				</div>
+
+				<div class="history__pic history__pic--second"></div>
+			</section>
+
+			<section class="contacts" id="contacts">
+				<h2 class="visually-hidden">Контакты ресторана Рестораныч</h2>
+				<div class="container">
+					<h2 class="title contacts__title">Забронировать стол</h2>
+					<div class="contacts__text">
+						<p>
+							Укажите какая дата вас интересует и какое будет количество гостей.
+							Мы свяжемся с вами в ближайшее время и подтвердим бронирование.
+						</p>
+					</div>
+
+					<form class="contacts__form" action="#">
+						<div class="contacts__form-inner">
+							<label class="visually-hidden" for="inp-username">username</label>
+							<input
+								class="input-name"
+								type="text"
+								placeholder="Введите Ваше имя"
+								required
+								name="username"
+								id="inp-username"
+							/>
+
+							<label class="visually-hidden" for="inp-tel">tel</label>
+							<input
+								class="input-name"
+								type="tel"
+								placeholder="Введите Ваш телефон"
+								required
+								name="phone"
+								id="inp-tel"
+							/>
+
+							<label class="visually-hidden" for="inp-number">number</label>
+							<input
+								class="input-name input-name--guest"
+								type="number"
+								min="1"
+								max="100"
+								placeholder="Кол-во гостей"
+								required
+								name="number"
+								id="inp-number"
+							/>
+
+							<div class="input-name-date">
+								<label class="visually-hidden" for="date">Время</label>
+								<input
+									class="input-name contacts__date"
+									name="date"
+									placeholder="Выберите время"
+									required
+									id="date"
+								/>
+							</div>
+						</div>
+						<div class="contacts__btn-inner">
+							<button class="btn contacts__btn" type="submit">
+								Забронировать стол
+							</button>
+							<span class="contacts__confidential"
+								>Нажимая на кнопку «Забронировать стол», вы соглашаетесь с
+								<a class="contacts__link popup-link" href="#popup_3"
+									>политикой конфедициальности</a
+								></span
+							>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="map">
+					<script
+						class="map-ya"
+						async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A47ba35575543f05f65c12238d2f2655fa092795b124b1abf4815d6d8e53263bc&amp;max-width=1500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+					></script>
+				</div>
+			</div>
+		</footer>
+
+		<div id="popup" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<div class="party">
+						<a href="#header" class="popup__close close-popup">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewbox="0 0 15 15"
+							>
+								<path
+									d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0"
+								/>
+							</svg>
+						</a>
+						<h2 class="title party__title">Заявка на банкет</h2>
+
+						<ul class="party__list">
+							<li class="party__item">
+								<img
+									class="party__img"
+									src="images/party/birthday.jpg"
+									alt="Дни рождения"
+								/>
+								<p class="party__text">Дни рождения и юбилеи</p>
+							</li>
+							<li class="party__item">
+								<img
+									class="party__img"
+									src="images/party/wedding.jpg"
+									alt="Свадьбы"
+								/>
+								<p class="party__text">Свадебные торжества</p>
+							</li>
+							<li class="party__item">
+								<img
+									class="party__img"
+									src="images/party/corporate.jpg"
+									alt="Корпоративы"
+								/>
+								<p class="party__text">Корпоративные праздники</p>
+							</li>
+							<li class="party__item">
+								<img
+									class="party__img"
+									src="images/party/kids.jpg"
+									alt="Детские праздники"
+								/>
+								<p class="party__text">Выпускные и детские</p>
+							</li>
+						</ul>
+
+						<div class="party__inner">
+							<p class="party__form-text">
+								Оставьте заявку, и мы свяжемся с Вами в ближайшее время!
+							</p>
+
+							<form class="party__form" action="#">
+								<label class="visually-hidden" for="username">username</label>
+								<input
+									class="input-name party__name"
+									type="text"
+									placeholder="Введите Ваше имя"
+									required
+									name="username"
+									id="username"
+								/>
+
+								<label class="visually-hidden" for="tel">tel</label>
+								<input
+									class="input-name party__tel"
+									type="tel"
+									placeholder="Введите Ваш телефон"
+									required
+									name="phone"
+									id="tel"
+								/>
+
+								<div class="form">
+									<div class="form__radio">
+										<input
+											id="radio-1"
+											type="radio"
+											name="radio"
+											value="1"
+											checked
+										/>
+										<label for="radio-1">Свадьба</label>
+									</div>
+
+									<div class="form__radio">
+										<input id="radio-2" type="radio" name="radio" value="2" />
+										<label for="radio-2">День рождения</label>
+									</div>
+
+									<div class="form__radio">
+										<input id="radio-3" type="radio" name="radio" value="3" />
+										<label for="radio-3">Корпоратив</label>
+									</div>
+
+									<div class="form__radio">
+										<input id="radio-4" type="radio" name="radio" value="4" />
+										<label for="radio-4">Выпускной или детский праздник</label>
+									</div>
+
+									<div class="form__radio">
+										<input id="radio-5" type="radio" name="radio" value="5" />
+										<label for="radio-5">Другое</label>
+									</div>
+								</div>
+
+								<button class="btn btn-more" type="submit">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup_2" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#header" class="popup__close close-popup">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewbox="0 0 15 15"
+						>
+							<path
+								d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0"
+							/>
+						</svg>
+					</a>
+
+					<h2 class="title menu__title">Меню ресторана</h2>
+
+					<ul class="menu__content">
+						<li class="menu__item mix category-a">
+							<h3 class="menu__item-title">Холодные закуски</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Карпаччо из брянской говядины с кинзой
+								</h4>
+								<p class="menu__item-desc">
+									Карпаччо — холодная закуска из тонких слайсов сырой говядины,
+									заправленных оливковым маслом, лимонным соком и специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1140</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Тельное из кефали под сливочным кулисом
+								</h4>
+								<p class="menu__item-desc">
+									Тельное из кефали с мясом краба под сливочным кулисом.
+									Подаётся с кремом из зелёного горошка, посыпается сушёной
+									домашней икрой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1200</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									"Мильфей" из дальневосточных морских гребешков
+								</h4>
+								<p class="menu__item-desc">
+									Морской гребешок прослаивается домашним сливочным сыром,
+									подаётся со спелым авокадо и золем из лесных ягод.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1650</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Строганина из ленского осетра</h4>
+								<p class="menu__item-desc">
+									Строганина из ленского осетра подается с раковыми шейками и
+									капперсами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1370</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Икра Белуги (30 гр)</h4>
+								<p class="menu__item-desc">
+									"Белуга гибрид" - это сорт икры, полученный от бестера,
+									гибрида двух видов осетровых рыб, сочетающий в себе скорое
+									созревание стерляди и быстрый рост белуги. Вкус этой икры
+									нежный, деликатный, маслянистый, ближе ко вкусу икры белуги.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">2720</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Средиземноморские молодые устрицы (6 штук)
+								</h4>
+								<p class="menu__item-desc">
+									Средиземноморские устрицы имеют необычный, нежный вкус,
+									благодаря которому они считаются изысканным деликатесом.
+									Секрет кроется в природных условиях в местах обитания устриц.
+									Растут они у берегов Туниса, на мелководье в чистой морской
+									воде. Особое значение имеют водоросли, которыми и питаются
+									моллюски. Именно они дают мясу тот самый вкус. Лучшими
+									приправами к мясу устриц являются лимонный сок, оливковое
+									масло и соевый соус.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1500</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Тар-тар из говядины Ангус</h4>
+								<p class="menu__item-desc">
+									Тартар - одна из самых популярных холодных закусок. В первую
+									очередь важно качество мяса, ведь блюдо не подвергается
+									термической обработке и подается сырым. Не стоит этого бояться
+									- стандарты качества и пищевой безопасности в нашем ресторане
+									гарантируют идеальный результат.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">700</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-b">
+							<h3 class="menu__item-title">Закуски в стол</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рыбное ассорти</h4>
+								<p class="menu__item-desc">
+									Лосось, скумбрия, сельдь слабого посола с эклерами с красной
+									икрой, сыром и сайрой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">880</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Ассорти из сыров</h4>
+								<p class="menu__item-desc">
+									Адыгейский сыр, гауда, пармезан, копченый сыр, дор блю, фета,
+									эклеры с творожным сыром и клюквой, мед, виноград, груша.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">830</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Мясная тарелка</h4>
+								<p class="menu__item-desc">
+									Гастрономия собственного производства: буженина, ростбиф,
+									пряная говядина, краинская колбаска с сыром; салями чорризо с
+									маринованными огурчиками, чесночным багетом и соусом хрен.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1070</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Ассорти из брускет</h4>
+								<p class="menu__item-desc">
+									С черри и фетой; с тар-таром из лосося; с запеченным перцем; с
+									пряной говядиной и вялеными томатами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">690</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Пряная говядина</h4>
+								<p class="menu__item-desc">
+									С каперсами, свежим салатом, сыром пармезан и бальзамической
+									заправкой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">480</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-c">
+							<h3 class="menu__item-title">Горячие закуски</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Закуска из запеченых овощей</h4>
+								<p class="menu__item-desc">
+									Томаты, цукини, баклажаны с чесноком и зеленью.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">865</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Закуска из перепелов</h4>
+								<p class="menu__item-desc">Перепела в соусе.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">595</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Креветки жареные</h4>
+								<p class="menu__item-desc">
+									Креветки жареные с ароматными специями и чесноком.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">895</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кесадилья с курицей</h4>
+								<p class="menu__item-desc">
+									Пшеничная лепешка с курицей с овощами и сыром.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">430</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Мидии в белом вине</h4>
+								<p class="menu__item-desc">
+									Мидии в соусе из беого вина, тимьяна и соевой заправки.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">720</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Тигровые креветки жареные</h4>
+								<p class="menu__item-desc">
+									Тигровые креветки обжаренные в остром соусе с добавлением
+									чеснока, томатов черри, зелени и лимона.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">865</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-d">
+							<h3 class="menu__item-title">Супы</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Борщ мясной</h4>
+								<p class="menu__item-desc">
+									Говяжий бульон, говядина, капуста, свёкла, картофель, морковь,
+									лук, томатная паста, чеснок. Украшается зеленью. Подается со
+									сметаной.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">430</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Солянка мясная</h4>
+								<p class="menu__item-desc">
+									Говяжий бульон, говядина, лук, соленые огурцы, томатная паста,
+									оливки, маслины, каперсы, лимон, Подается со сметаной.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">475</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Удон с курицей и креветками</h4>
+								<p class="menu__item-desc">
+									Куриный бульон, паста карри, курица, креветки, лапша удон,
+									шампиньоны, болгарский перец, морковь, лук порей, устричный
+									соус, соевый соус.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">550</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Крем-суп из брокколи с лососем</h4>
+								<p class="menu__item-desc">
+									Лосось, брокколи, картофель, лук, мускатный орех, петрушка.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">620</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Крем-суп из раковых шеек</h4>
+								<p class="menu__item-desc">
+									Сливки, лук, морковь сельдерей, томатная паста, креветки,
+									гвоздика, сухарики.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">650</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-e">
+							<h3 class="menu__item-title">Горячие блюда из птицы и дичи</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Перепёлка фаршированная яблоками в клюквенном соусе
+								</h4>
+								<p class="menu__item-desc">Перепёлка с кисло сладким соусом.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">710</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Филе фермерского цыплёнка на гриле с кускусом
+								</h4>
+								<p class="menu__item-desc">
+									Филе,сладкий соус чили, кускус, изюм, руккола.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">680</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Лявенги из перепелки</h4>
+								<p class="menu__item-desc">Алыча, Орехи грецкие, Перепелка</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">790</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">"Лесное застолье"</h4>
+								<p class="menu__item-desc">
+									По Вашему выбору филе изюбря, оленя, косули или кабана,
+									которое маринуется в специях, а затем обжирвается с
+									папоротником, овощами и кедровыми орешками.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">820</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">"Лакомство шамана"</h4>
+								<p class="menu__item-desc">
+									Обжаренное филе дичи (олень, изюбрь, косуля или кабан, по
+									Вашему выбору), начиненное куриной печенью. Подается с
+									ароматной поджаркой из приморского папоротника с овощами,
+									чесноком, зеленью и специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">895</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Оленина с грушей</h4>
+								<p class="menu__item-desc">
+									Филе оленя, маринованное в красном вине. Подается под соусом
+									"Мицукан".
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">850</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Дичь в сметане на сковороде</h4>
+								<p class="menu__item-desc">
+									По Вашему выбору: филе изюбря, оленя, косули, кабана или
+									медведя, запеченные с шампиньонами в сметанном соусе с сыром и
+									зеленью.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">845</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Оленина на гриле</h4>
+								<p class="menu__item-desc">
+									Нежное, сочное мясо оленя, маринованное в красном вине,
+									гарнируется обжаренными кусочками кабачков, зеленью и
+									специями.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">795</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-f">
+							<h3 class="menu__item-title">
+								Горячие блюда из рыбы и морепродуктов
+							</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рыбный сет-гриль на 2 персоны</h4>
+								<p class="menu__item-desc">
+									Обжаренное филе судака, скумбрии, лосося, кальмара, лангустин
+									гриль, мидии с соусом провансаль.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Командорский кальмар-гриль</h4>
+								<p class="menu__item-desc">
+									С овощами и соусом «сливочный хрен».
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">590</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Рис с морепродуктами в соусе том ям
+								</h4>
+								<p class="menu__item-desc">Креветки, мидии, кальмар, овощи.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">690</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Филе лосося</h4>
+								<p class="menu__item-desc">
+									С кабачками гриль и сливочно-цитрусовым соусом
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">920</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Гребешки Сенжаки с жюльеном</h4>
+								<p class="menu__item-desc">
+									Гребешки, микс салат, цукини, соус биск.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">795</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кальмары Пино Гриджо Венето</h4>
+								<p class="menu__item-desc">
+									Кальмары, горчица дижонская, перец болгарский, томаты, микс
+									салат.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">600</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Палтус с томатом гриль</h4>
+								<p class="menu__item-desc">
+									Филе палтуса, томаты свежие, моцарелла.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">750</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-g">
+							<h3 class="menu__item-title">Горячие блюда из мяса</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Вырезка говядины на гриле</h4>
+								<p class="menu__item-desc">
+									С соусом порто на блинчике с булгуром и грибами.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">950</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Фланк-стейк</h4>
+								<p class="menu__item-desc">
+									С овощами гриль и соусом из черного перца.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1240</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Филе-миньон с кукурузой гриль</h4>
+								<p class="menu__item-desc">
+									С жареными грибами и перечным соусом.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">1175</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Рубленый бифштекс</h4>
+								<p class="menu__item-desc">
+									С сыром, яйцом пашот, малосольными огурчиками и картофелем с
+									чесночком.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">875</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Медальоны из свинины</h4>
+								<p class="menu__item-desc">
+									В перечном соусе с вялеными томатами и кус кусом.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">650</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Баранина на кости в панировке из свеклы и грецких орехов
+								</h4>
+								<p class="menu__item-desc">
+									Баранья корейка, обжаренная на гриле, в панировке из свеклы и
+									грецких орехов, с гарниров из обжаренных долек батата.
+									Подается с соусом "Демиглас".
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">990</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-h">
+							<h3 class="menu__item-title">Гарниры</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Картофель с розмарином кинзой</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Овощной гарнир с грибами</h4>
+								<p class="menu__item-desc">
+									Жареные кабачки, болгарский перец, брокколи, грибы, черри.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">120</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Капуста тушеная</h4>
+								<p class="menu__item-desc">
+									Квашеная немецкая капуста, тушеная с белым вином, беконом и
+									можжевеловой ягодой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">200</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Сливочный рис с песто</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Кукуруза гриль</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+								<h4 class="menu__item-name">Картофель фри</h4>
+								<div class="menu__price">
+									-<span class="menu__item-price">150</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Овощи гриль</h4>
+								<p class="menu__item-desc">
+									Кукуруза, кабачки, баклажаны, перец болгарский, томаты черри
+									приготовленные на гриле.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">240</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+
+						<li class="menu__item mix category-i">
+							<h3 class="menu__item-title">Десерты</h3>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Чизкейк</h4>
+								<p class="menu__item-desc">
+									Нежный сливочный десерт на основе сыра филадельфия.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">290</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Брусничный торт</h4>
+								<div class="menu__price">
+									<p>С нежным кремом из сыра.</p>
+								</div>
+								<div class="menu__price">
+									-<span class="menu__item-price">240</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Шоколадный фондан</h4>
+								<p class="menu__item-desc">
+									С пломбиром, клубникой, топингом и мятой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">290</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Наполеон</h4>
+								<p class="menu__item-desc">С клубничным соусом.</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">
+									Мороженое Семифредо с темным шоколадом
+								</h4>
+								<p class="menu__item-desc">
+									Сливочно-творожный десерт с темным шоколадом и голубикой.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">190</span> <span>руб.</span>-
+								</div>
+							</article>
+
+							<article class="menu__product">
+								<h4 class="menu__item-name">Фруктовая ваза</h4>
+								<p class="menu__item-desc">
+									Груши, виноград, апельсины, яблоки, ананас, киви, ягоды.
+								</p>
+								<div class="menu__price">
+									-<span class="menu__item-price">890</span> <span>руб.</span>-
+								</div>
+							</article>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup_3" class="popup">
+			<div class="popup__body">
+				<div class="popup__content confidential-content">
+					<a href="#header" class="popup__close close-popup">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewbox="0 0 15 15"
+						>
+							<path
+								d="M8.832 7.496l6.059-6.062a.337.337 0 000-.473l-.864-.863a.337.337 0 00-.472 0L7.496 6.156 1.434.098a.345.345 0 00-.473 0L.098.96a.337.337 0 000 .473l6.058 6.062-6.058 6.059a.337.337 0 000 .472l.863.864a.337.337 0 00.473 0l6.062-6.059 6.059 6.059a.335.335 0 00.472 0l.864-.864a.337.337 0 000-.472zm0 0"
+							/>
+						</svg>
+					</a>
+
+					<h3 class="title">
+						Политика в отношении обработки персональных данных
+					</h3>
+
+					<ol class="confidential-content__text">
+						<li class="confidential-content__text-item">
+							Общие положения<br />
+							Настоящая политика обработки персональных данных составлена в
+							соответствии с требованиями Федерального закона от 27.07.2006.
+							№152-ФЗ «О персональных данных» и определяет порядок обработки
+							персональных данных и меры по обеспечению безопасности
+							персональных данных, предпринимаемые Рестораныч (далее –
+							Оператор).
+							<ol>
+								<li>
+									Оператор ставит своей важнейшей целью и условием осуществления
+									своей деятельности соблюдение прав и свобод человека и
+									гражданина при обработке его персональных данных, в том числе
+									защиты прав на неприкосновенность частной жизни, личную и
+									семейную тайну.
+								</li>
+								<li>
+									Настоящая политика Оператора в отношении обработки
+									персональных данных (далее – Политика) применяется ко всей
+									информации, которую Оператор может получить о посетителях
+									веб-сайта http://yp.ru/
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Основные понятия, используемые в Политике<br />
+							<ol>
+								<li>
+									Автоматизированная обработка персональных данных – обработка
+									персональных данных с помощью средств вычислительной техники;
+								</li>
+								<li>
+									Блокирование персональных данных – временное прекращение
+									обработки персональных данных (за исключением случаев, если
+									обработка необходима для уточнения персональных данных);
+								</li>
+								<li>
+									Веб-сайт – совокупность графических и информационных
+									материалов, а также программ для ЭВМ и баз данных,
+									обеспечивающих их доступность в сети интернет по сетевому
+									адресу http://yp.ru/;
+								</li>
+								<li>
+									Информационная система персональных данных — совокупность
+									содержащихся в базах данных персональных данных, и
+									обеспечивающих их обработку информационных технологий и
+									технических средств;
+								</li>
+								<li>
+									Обезличивание персональных данных — действия, в результате
+									которых невозможно определить без использования дополнительной
+									информации принадлежность персональных данных конкретному
+									Пользователю или иному субъекту персональных данных;
+								</li>
+								<li>
+									Обработка персональных данных – любое действие (операция) или
+									совокупность действий (операций), совершаемых с использованием
+									средств автоматизации или без использования таких средств с
+									персональными данными, включая сбор, запись, систематизацию,
+									накопление, хранение, уточнение (обновление, изменение),
+									извлечение, использование, передачу (распространение,
+									предоставление, доступ), обезличивание, блокирование,
+									удаление, уничтожение персональных данных;
+								</li>
+								<li>
+									Оператор – государственный орган, муниципальный орган,
+									юридическое или физическое лицо, самостоятельно или совместно
+									с другими лицами организующие и (или) осуществляющие обработку
+									персональных данных, а также определяющие цели обработки
+									персональных данных, состав персональных данных, подлежащих
+									обработке, действия (операции), совершаемые с персональными
+									данными;
+								</li>
+								<li>
+									Персональные данные – любая информация, относящаяся прямо или
+									косвенно к определенному или определяемому Пользователю
+									веб-сайта http://yp.ru/;
+								</li>
+								<li>
+									Пользователь – любой посетитель веб-сайта http://yp.ru/;
+								</li>
+								<li>
+									Предоставление персональных данных – действия, направленные на
+									раскрытие персональных данных определенному лицу или
+									определенному кругу лиц;
+								</li>
+								<li>
+									Распространение персональных данных – любые действия,
+									направленные на раскрытие персональных данных неопределенному
+									кругу лиц (передача персональных данных) или на ознакомление с
+									персональными данными неограниченного круга лиц, в том числе
+									обнародование персональных данных в средствах массовой
+									информации, размещение в информационно-телекоммуникационных
+									сетях или предоставление доступа к персональным данным
+									каким-либо иным способом;
+								</li>
+								<li>
+									Трансграничная передача персональных данных – передача
+									персональных данных на территорию иностранного государства
+									органу власти иностранного государства, иностранному
+									физическому или иностранному юридическому лицу;
+								</li>
+								<li>
+									Уничтожение персональных данных – любые действия, в результате
+									которых персональные данные уничтожаются безвозвратно с
+									невозможностью дальнейшего восстановления содержания
+									персональных данных в информационной системе персональных
+									данных и (или) уничтожаются материальные носители персональных
+									данных.
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Оператор может обрабатывать следующие персональные данные
+							Пользователя<br />
+							<ol>
+								<li>Фамилия, имя, отчество;</li>
+								<li>Электронный адрес;</li>
+								<li>Номера телефонов;</li>
+								<li>
+									Также на сайте происходит сбор и обработка обезличенных данных
+									о посетителях (в т.ч. файлов «cookie») с помощью сервисов
+									интернет-статистики (Яндекс Метрика и Гугл Аналитика и
+									других).
+								</li>
+								<li>
+									Вышеперечисленные данные далее по тексту Политики объединены
+									общим понятием Персональные данные.
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Цели обработки персональных данных<br />
+							<ol>
+								<li>
+									Цель обработки персональных данных Пользователя —
+									предоставление доступа Пользователю к сервисам, информации
+									и/или материалам, содержащимся на веб-сайте.
+								</li>
+								<li>
+									Также Оператор имеет право направлять Пользователю уведомления
+									о новых продуктах и услугах, специальных предложениях и
+									различных событиях. Пользователь всегда может отказаться от
+									получения информационных сообщений, направив Оператору письмо
+									на адрес электронной почты info@yp.ru с пометкой «Отказ от
+									уведомлений о новых продуктах и услугах и специальных
+									предложениях».
+								</li>
+								<li>
+									Обезличенные данные Пользователей, собираемые с помощью
+									сервисов интернет-статистики, служат для сбора информации о
+									действиях Пользователей на сайте, улучшения качества сайта и
+									его содержания.
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Правовые основания обработки персональных данных<br />
+							<ol>
+								<li>
+									Оператор обрабатывает персональные данные Пользователя только
+									в случае их заполнения и/или отправки Пользователем
+									самостоятельно через специальные формы, расположенные на сайте
+									http://yp.ru/. Заполняя соответствующие формы и/или отправляя
+									свои персональные данные Оператору, Пользователь выражает свое
+									согласие с данной Политикой.
+								</li>
+								<li>
+									Оператор обрабатывает обезличенные данные о Пользователе в
+									случае, если это разрешено в настройках браузера Пользователя
+									(включено сохранение файлов «cookie» и использование
+									технологии JavaScript).
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Порядок сбора, хранения, передачи и других видов обработки
+							персональных данных<br />
+							Безопасность персональных данных, которые обрабатываются
+							Оператором, обеспечивается путем реализации правовых,
+							организационных и технических мер, необходимых для выполнения в
+							полном объеме требований действующего законодательства в области
+							защиты персональных данных.
+							<ol>
+								<li>
+									Оператор обеспечивает сохранность персональных данных и
+									принимает все возможные меры, исключающие доступ к
+									персональным данным неуполномоченных лиц.
+								</li>
+								<li>
+									Персональные данные Пользователя никогда, ни при каких
+									условиях не будут переданы третьим лицам, за исключением
+									случаев, связанных с исполнением действующего
+									законодательства.
+								</li>
+								<li>
+									В случае выявления неточностей в персональных данных,
+									Пользователь может актуализировать их самостоятельно, путем
+									направления Оператору уведомление на адрес электронной почты
+									Оператора info@yp.ru с пометкой «Актуализация персональных
+									данных».
+								</li>
+								<li>
+									Срок обработки персональных данных является неограниченным.
+									Пользователь может в любой момент отозвать свое согласие на
+									обработку персональных данных, направив Оператору уведомление
+									посредством электронной почты на электронный адрес Оператора
+									info@yp.ru с пометкой «Отзыв согласия на обработку
+									персональных данных».
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Трансграничная передача персональных данных<br />
+							<ol>
+								<li>
+									Оператор до начала осуществления трансграничной передачи
+									персональных данных обязан убедиться в том, что иностранным
+									государством, на территорию которого предполагается
+									осуществлять передачу персональных данных, обеспечивается
+									надежная защита прав субъектов персональных данных.
+								</li>
+								<li>
+									Трансграничная передача персональных данных на территории
+									иностранных государств, не отвечающих вышеуказанным
+									требованиям, может осуществляться только в случае наличия
+									согласия в письменной форме субъекта персональных данных на
+									трансграничную передачу его персональных данных и/или
+									исполнения договора, стороной которого является субъект
+									персональных данных.
+								</li>
+							</ol>
+						</li>
+
+						<li class="confidential-content__text-item">
+							Заключительные положения<br />
+							<ol>
+								<li>
+									Пользователь может получить любые разъяснения по интересующим
+									вопросам, касающимся обработки его персональных данных,
+									обратившись к Оператору с помощью электронной почты
+									info@yp.ru.
+								</li>
+								<li>
+									В данном документе будут отражены любые изменения политики
+									обработки персональных данных Оператором. Политика действует
+									бессрочно до замены ее новой версией.
+								</li>
+								<li>
+									Актуальная версия Политики в свободном доступе расположена в
+									сети Интернет по адресу http://yp.ru/yp.ru/privacy
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/main.min.js"></script>
+	</body>
 </html>
